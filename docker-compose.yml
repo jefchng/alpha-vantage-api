@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  62bced2aff404a99afa3032b8fe953c5:
+    image: 62bced2aff404a99afa3032b8fe953c5
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    secrets:
+      - alpha_vantage_api_key
+
+secrets:
+  alpha_vantage_api_key:
+    file: ./secrets/alpha_vantage_api_key.txt
